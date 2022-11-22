@@ -15,4 +15,12 @@ class HomeView(View):
         )
 
 class BoroughView(View):
-   pass
+   def get(self,request,borough):
+    return render(
+        request = request,
+        template_name = 'borough.html',
+        context = {'borough': borough, 'activities': boroughs[borough].keys()},
+    )
+
+class ActivityView(View):
+    pass
