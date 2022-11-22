@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from boroughs import boroughs
+from nycapp.boroughs import boroughs
 
 # Create class views
 
@@ -13,3 +13,6 @@ class HomeView(View):
                 'boroughs': boroughs.keys(),
             }
         )
+
+class BoroughView(View):
+   pass
